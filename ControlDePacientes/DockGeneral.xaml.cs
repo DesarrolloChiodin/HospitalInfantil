@@ -46,6 +46,7 @@ namespace ControlDePacientes
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             //linea agregada
+            // linea 2
             //using (MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection(connStr))
             //{
             //    {
