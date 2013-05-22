@@ -47,6 +47,8 @@ namespace ControlDePacientes
         {
             //linea agregada
             // linea 2
+            // lINEA 5
+            // Linea 10
             //using (MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection(connStr))
             //{
             //    {
