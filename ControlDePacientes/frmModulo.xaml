@@ -1,0 +1,80 @@
+﻿<Page x:Class="ControlDePacientes.frmModulo"
+	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	  mc:Ignorable="d" 
+	  
+	Title="frmModulo" Loaded="Page_Loaded">
+
+	<Grid>
+		<ScrollViewer  Name="scrollViewer1" >
+			<StackPanel  Name="stackPanel1" >
+				<Expander IsExpanded="True"  Header="Módulo"  Name="expander1">
+					<Grid>
+						<StackPanel  Name="stackPanel2" >
+							<Grid  Name="grid1" >
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="25*" />
+									<ColumnDefinition Width="25*" />
+									<ColumnDefinition Width="25*" />
+									<ColumnDefinition Width="25*" />
+								</Grid.ColumnDefinitions>
+								<Grid.RowDefinitions>
+									<RowDefinition  />
+									<RowDefinition />
+								  
+								</Grid.RowDefinitions>
+								<Label Content="Nombre Módulo"  Height="28"  Name="label1" Grid.Column="0" Grid.Row="0"/>
+								<TextBox Grid.Column="1" Grid.Row="0"  Name="txtModuloName" />
+								<Label Content="Tipo Usuario" Grid.Column="2" Grid.Row="0" Name="label2" />
+								<ComboBox Grid.Column="3" Grid.Row="0"  Name="cmbTipoUsuario"  />
+							</Grid>
+							<WrapPanel HorizontalAlignment="Center" Name="wrapPanel1">
+								<Button Style="{StaticResource SaveButton}"  Name="btnGuardarModulo" Click="btnGuardarModulo_Click" />
+								<Button Style="{StaticResource CancelButton}" Name="btnCancelModulo" Click="btnCancelModulo_Click" />
+								<Button Style="{StaticResource DeleteButton}" Name="btnDeleteModulo" Click="btnDeleteModulo_Click" />
+							</WrapPanel>
+							<DataGrid CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True"  AutoGenerateColumns="True" Style="{StaticResource DataGridStyle}"   Name="dtgModulo" SelectionChanged="dtgModulo_SelectionChanged" />
+							
+						</StackPanel>
+					</Grid>
+				</Expander>
+                <Expander Header="Módulo Hijo"  Name="expander2" IsExpanded="True">
+                    <Grid>
+                        <StackPanel  Name="stackPanel3">
+                            <Grid Name="grid2" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition />
+                                    <RowDefinition  />
+                                    <RowDefinition  />
+                                    <RowDefinition  />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25*" />
+                                    <ColumnDefinition Width="25*" />
+                                    <ColumnDefinition Width="25*" />
+                                    <ColumnDefinition Width="25*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Content="Nombre Modulo Hijo" Grid.Row="0" Grid.Column="0" Name="label3" />
+                                <TextBox  Name="txtModuloHijoName" Grid.Row="0" Grid.Column="1" />
+                                <Label Content="Imagén" Grid.Row="0" Grid.Column="2"   Name="label4"/>
+                                <TextBox Grid.Column="3" Grid.Row="0" Name="txtModuloHijoImagen"  />
+                                <Label Content="Módulo" Grid.Row="1" Grid.Column="0" Name="label5" />
+                                <ComboBox  Grid.Row="1" Grid.Column="1" Name="cmbModulo" />
+                                <Label Content="Nombre del Page" Grid.Column="2" Grid.Row="1"  Name="label6"  />
+                                <TextBox Grid.Column="3" Grid.Row="1"   Name="txtModuloHijoPage"  />
+                            </Grid>
+                            <WrapPanel HorizontalAlignment="Center" Name="wrapPanel2">
+                                <Button Style="{StaticResource SaveButton}"  Name="btnGuardarModuloHijo" Click="btnGuardarModuloHijo_Click" />
+                                <Button Style="{StaticResource CancelButton}" Name="btnCancelModuloHijo" Click="btnCancelModuloHijo_Click" />
+                                <Button Style="{StaticResource DeleteButton}" Name="btnDeleteModuloHijo" Click="btnDeleteModuloHijo_Click" />
+                            </WrapPanel>
+                            <DataGrid AutoGenerateColumns="True" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" Style="{StaticResource DataGridStyle}"  Name="dtgModuloHijo" SelectionChanged="dtgModuloHijo_SelectionChanged" />
+                        </StackPanel>
+                    </Grid>
+                </Expander>
+            </StackPanel>
+		</ScrollViewer>
+	</Grid>
+</Page>

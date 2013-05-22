@@ -1,0 +1,67 @@
+﻿<Window x:Class="ControlDePacientes.frmPopUpInfoAdicionalPaciente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Información Adicional para Historial del Paciente" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStyle="ToolWindow"  xmlns:my="clr-namespace:ControlDePacientes.UserControls" Loaded="Window_Loaded" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" d:DesignWidth="705" SizeToContent="WidthAndHeight" d:DesignHeight="286" Closing="Window_Closing" ResizeMode="NoResize">
+    <Grid Width="665" Height="248">
+        <StackPanel>
+            <Grid Width="663" Height="211">
+                <Grid.RowDefinitions>
+                    <RowDefinition  />
+                    <RowDefinition  />
+                    <RowDefinition  />
+                    <RowDefinition />
+                    <RowDefinition  />
+                    <RowDefinition  />
+                    <RowDefinition  />
+                    <RowDefinition  />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="25*" />
+                    <ColumnDefinition Width="25*" />
+                    <ColumnDefinition Width="25*" />
+                    <ColumnDefinition Width="25*" />
+                </Grid.ColumnDefinitions>
+                
+                <Label Content="Nombre Acompañante" Grid.Row="0" Grid.Column="0"/>
+                <TextBox Name="txtNombreAcompanante" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3"/>
+
+                <Label Content="Cedula ó  DPI" Grid.Row="1" Grid.Column="0"/>
+                <TextBox Name="txtCedulaDpiAcompanante" Grid.Row="1" Grid.Column="1" />
+
+                <Label Content="Telefono Acompañante" Grid.Row="1" Grid.Column="2"/>
+                <TextBox Name="txtTelefonoAcompanante" Grid.Row="1" Grid.Column="3" />
+
+                <Label Content="Celular Acompañante" Grid.Row="2" Grid.Column="0"/>
+                <TextBox Name="txtCelularAcompanante" Grid.Row="2" Grid.Column="1" />
+
+                <Label Content="Dirección Residencia" Grid.Row="2" Grid.Column="2"/>
+                <TextBox Name="txtDireccion" Grid.Row="2" Grid.Column="3" />
+
+                <Label Content="Retira paciente?" Grid.Row="3" Grid.Column="0"/>
+                <CheckBox Name="chkRetiraPaciente" Grid.Row="3" VerticalAlignment="Center" Grid.Column="1" Content="" Checked="chkRetiraPaciente_Checked" Unchecked="chkRetiraPaciente_Unchecked" />
+
+                <Label Content="Persona que Retira?" Grid.Row="3" Grid.Column="2"/>
+                <TextBox Name="txtPersonaRetiraPaciente" Grid.Row="3" Grid.Column="3" />
+
+                <Label Content="Historia Acompañante" Grid.Row="4" Height="26" VerticalAlignment="Top" />
+                <TextBox Name="txtHistoriaAcompanante" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" />
+                <Label Content="Nuevo Paciente?" Grid.Row="5" Grid.Column="0"/>
+                <CheckBox Name="chkNuevoPaciente" Grid.Row="5" VerticalAlignment="Center" Grid.Column="1" Content="" />
+
+
+                <Label Content="Guardar info. Adicional?" Grid.Row="5" Grid.Column="2"/>
+                <CheckBox Name="chkInfoAdicional" Grid.Row="5" VerticalAlignment="Center" Grid.Column="3" Content="" Checked="chkInfoAdicional_Checked" Unchecked="chkInfoAdicional_Unchecked" />
+
+
+                <Label Content="Consulta" Grid.Row="6" Grid.Column="0"/>
+                <ComboBox Name="cmbConsulta" Grid.Row="6" Grid.Column="1" />
+
+
+                <Label Content="Referencia" Grid.Row="6" Grid.Column="2"/>
+                <ComboBox Name="cmbReferencia" Grid.Row="6" Grid.Column="3" />
+                <Grid Height="25" Grid.Row="7" Grid.Column="0"></Grid>
+            </Grid>
+            <my:BasicButtons x:Name="usrBotones" ButtonSaveClick="usrBotones_ButtonSaveClick" ButtonDeleteClick="usrBotones_ButtonDeleteClick" ButtonCancelClick="usrBotones_ButtonCancelClick" Loaded="usrBotones_Loaded" />
+        </StackPanel>
+    </Grid>
+</Window>

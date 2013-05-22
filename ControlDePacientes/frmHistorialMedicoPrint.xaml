@@ -1,0 +1,212 @@
+﻿<Page x:Class="ControlDePacientes.frmHistorialMedicoPrint"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+     
+	Title="frmHistorialMedicoPrint" Loaded="Page_Loaded">
+    <ScrollViewer  Name="ScrollGeneral" >
+    <Grid Name="GridHistorial" >
+            <StackPanel>
+                <Expander Header="Consulta Registro Médico" Name="expSearch" >
+                    <StackPanel>
+                        <Grid >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="25*" />
+                                <ColumnDefinition Width="25*" />
+                                <ColumnDefinition Width="25*" />
+                                <ColumnDefinition Width="25*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Registro Medico"  Name="label12" Grid.Column="0" Grid.Row="0"   />
+                            <TextBox Name="txtIdPacienteSearch" Grid.Column="1" Grid.Row="0" KeyDown="txtIdPacienteSearch_KeyDown"></TextBox>
+                            <Button Content="Buscar"  Grid.Column="2" Grid.Row="0"    Name="btnSearch" Click="BtnSearch_Click" Width="150"  />
+                        </Grid>
+                        
+                        <!--<WrapPanel HorizontalAlignment="Center">
+                            <Button Name="BtnSearch" Style="{StaticResource SearchButton}" Click="BtnSearch_Click"></Button>
+                        </WrapPanel>-->
+                        <Grid Width="10"></Grid>
+                        <DataGrid Name="dtgRegistroMedico" CanUserAddRows="False" AutoGenerateColumns="False"  CanUserDeleteRows="False" IsReadOnly="True"  SelectionChanged="dtgRegistroMedico_SelectionChanged">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding RegistroMedico}"    Header="Registro Médico" IsReadOnly="True" />
+                                <DataGridTextColumn Binding="{Binding Nombre}"    Header="Nombre y Apellidos" IsReadOnly="True" />
+                                <DataGridTextColumn Binding="{Binding Fecha}"    Header="Fecha" IsReadOnly="True" />
+                                <DataGridTextColumn Binding="{Binding Correlativo}"    Header="Visitas del Año" IsReadOnly="True" />
+                                <DataGridTextColumn Binding="{Binding MotivoConsulta}"    Header="Motivo de la Consulta" IsReadOnly="True" />
+                                <DataGridTextColumn Binding="{Binding ImpresionClinica}"    Header="Impresión Clínica" IsReadOnly="True" />
+                                <DataGridTextColumn Binding="{Binding TratamientoConsultaExterna}"    Header="Tratamiento Coex" IsReadOnly="True" />
+                                <DataGridTextColumn Binding="{Binding DestinoCasoName}"    Header="Destino del Caso" IsReadOnly="True" />
+                                <DataGridTextColumn Binding="{Binding Observaciones}"    Header="Observaciones" IsReadOnly="True" />
+                                <DataGridTextColumn Binding="{Binding ServicioName}"    Header="Servicio" IsReadOnly="True" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </StackPanel>
+                </Expander>
+
+            <Expander IsExpanded="False"  Header="Información del Paciente" Name="expDetail">
+                <Grid>
+                    <StackPanel   Name="stackPanel2">
+                        
+                        <Grid  Name="grid1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition  />
+                                <RowDefinition  />
+                                <RowDefinition  />
+                                <RowDefinition  />
+                                <RowDefinition  />
+                                <RowDefinition  />
+                                <RowDefinition  />
+                                <RowDefinition  />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="25*" />
+                                <ColumnDefinition Width="25*" />
+                                <ColumnDefinition Width="25*" />
+                                <ColumnDefinition Width="25*" />
+                                <ColumnDefinition Width="25*" />
+                                <ColumnDefinition Width="25*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Registro Médico"  Grid.Column="0" Grid.Row="0"   Name="label1"  />
+                            <TextBox Grid.Column="1" Grid.Row="0"  Name="txtIdPaciente"  KeyDown="txtIdPaciente_KeyDown" />
+                            <Label Content="Nombre" Grid.Row="1" Grid.Column="0"  Name="label3" />
+                            <TextBox Grid.Column="1" Grid.Row="1"  Name="txtNombrePaciente"  />
+                            <Label Content="Apellido" Grid.Column="2"  Grid.Row="1"   Name="label4"  />
+                            <TextBox Grid.Column="3"  Grid.Row="1" Name="txtApellidoPaciente" />
+                            <Label Content="Sexo" Grid.Row="2" Grid.Column="0" Name="label5" />
+                            <TextBox Grid.Column="1"  Grid.Row="2" Name="txtSexo"  />
+                            <Label Content="Edad" Grid.Column="2" Grid.Row="2"  Name="label6"  />
+                            <Label Grid.Column="3"  Grid.Row="2" Name="lblEdad"  />
+                                <Image Grid.Column="4" Grid.ColumnSpan="2" Grid.RowSpan="5"  Name="imgPaciente" Height="125" Stretch="Fill" Width="100"    Source="/ControlDePacientes;component/Images/Attach.png" />
+                            <Label Content="Fecha" Grid.Column="2"   Name="label7"  />
+                            <Label Content="Label" Grid.Column="3"  Name="lblDate"  />
+                            <Label Content="Dirección" Grid.Column="0" Grid.Row="4" Name="label2" />
+                            <TextBox Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" Name="txtDireccion"  />
+                            <Label Content="Nombre Padre" Grid.Column="0" Grid.Row="3" Name="label9"  />
+                            <TextBox Grid.Row="3" Grid.Column="1" Name="txtNombrePadre" />
+                            <Label Content="Nombre Madre" Grid.Column="2"  Grid.Row="3" Name="label10"  />
+                            <TextBox Grid.Column="3"  Grid.Row="3"  Name="txtNombreMadre"  />
+                        </Grid>
+                            <Grid>
+                                <StackPanel Name="stackPanel3">
+                                    <Grid  Name="grid2">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition />
+                                            <RowDefinition  />
+                                            <RowDefinition  />
+                                            <RowDefinition  />
+                                            <RowDefinition  />
+                                            <RowDefinition  />
+                                            <RowDefinition  />
+                                            <RowDefinition  />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="25*" />
+                                            <ColumnDefinition Width="25*" />
+                                            <ColumnDefinition Width="25*" />
+                                            <ColumnDefinition Width="25*" />
+                                            <ColumnDefinition Width="25*" />
+                                            <ColumnDefinition Width="25*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Content="Motivo Consulta" Grid.Column="0" Grid.Row="0" Name="label11"  />
+                                        <TextBox Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="3" Name="txtMotivoConsulta" />
+                                        <Label Content="Servicio" Grid.Column="4"  Grid.Row="0"  Name="label13" />
+                                        <ComboBox  Grid.Column="5"  Grid.Row="0" Name="cmbServicio" />
+                                        <Label Content="Pres. Arterial" Grid.Column="0" Grid.Row="1" Name="label15" />
+                                        <TextBox Grid.Column="1" Grid.Row="1" Name="txtPA" MaxLength="10" />
+                                        <Label Content="Frec. Cardaica" Grid.Column="2" Grid.Row="1"   Name="label16"  />
+                                        <TextBox Grid.Column="3" Grid.Row="1" Name="txtFC" MaxLength="10" />
+                                        <Label Content="Rayos X" Grid.Column="4" Grid.Row="1"   Name="label17"  />
+                                        <TextBox Grid.Column="5" Grid.Row="1" Name="txtRX" MaxLength="30" />
+                                        <Label Content="Frec. Respiratoria" Grid.Column="0" Grid.Row="2"   Name="label18"  />
+                                        <TextBox Grid.Column="1" Grid.Row="2" Name="txtFR" MaxLength="10" />
+                                        <Label Content="Temperatura" Grid.Column="2" Grid.Row="2"   Name="label19"  />
+                                        <TextBox Grid.Column="3" Grid.Row="2" Name="txtTemp" MaxLength="10" />
+                                        <Label Content="Circunf. Cefálica" Grid.Column="4" Grid.Row="2"   Name="label20"  />
+                                        <TextBox Grid.Column="5" Grid.Row="2" Name="txtCC" MaxLength="10" />
+                                        <Label Content="Peso" Grid.Column="0" Grid.Row="3"   Name="label21"  />
+                                        <TextBox Grid.Column="1" Grid.Row="3" Name="txtPeso" MaxLength="10" />
+                                        <Label Content="Talla" Grid.Column="2" Grid.Row="3"   Name="label22"  />
+                                        <TextBox Grid.Column="3" Grid.Row="3" Name="txtTalla" MaxLength="10" />
+                                        <Label Content="Peso/Talla" Grid.Column="4" Grid.Row="3" Name="label800"  />
+                                        <TextBox Grid.Column="5" Grid.Row="3"  Name="txtPesoTalla"  />
+                                        <Label Content="Masa Corporal" Grid.Column="0" Grid.Row="5"   Name="label23"  />
+                                        <TextBox Grid.Column="1" Grid.Row="5" Name="txtMC" MaxLength="10" />
+                                        <Label Content="Talla/Edad" Grid.Column="0" Grid.Row="4"   Name="label24"  />
+                                        <TextBox Grid.Column="1" Grid.Row="4" Name="txtTE" MaxLength="10" />
+                                        <Label Content="Peso/Edad" Grid.Column="2" Grid.Row="4"   Name="label25"  />
+                                        <TextBox Grid.Column="3" Grid.Row="4" Name="txtPE" MaxLength="10" />
+                                        <Label Content="Saturación O2" Grid.Column="4" Grid.Row="4"   Name="label26"  />
+                                        <TextBox Grid.Column="5" Grid.Row="4" Name="txtSaturacion" MaxLength="10" />
+                                        <Label Content="Exámen Físico" Grid.Column="0" Grid.Row="6"   Name="label27"  />
+                                        <TextBox Grid.Column="1" Grid.Row="6"  Grid.ColumnSpan="5"  Name="txtExamenFisico"  />
+                                        <Label Content="Antecedentes Impor." Grid.Column="0" Grid.Row="7"   Name="label28"  />
+                                        <TextBox Grid.Column="1" Grid.Row="7"  Grid.ColumnSpan="5"  Name="txtAntecedentes"  />
+
+                                    </Grid>
+                                    
+                                </StackPanel>
+                            </Grid>
+                            <Grid>
+                            <StackPanel Name="stackPanel300">
+                                    <Grid>
+                                        <StackPanel Name="stackPanel30">
+                                            <Grid  Name="grid20">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition />
+                                                    <RowDefinition />
+                                                    <RowDefinition  />
+                                                    <RowDefinition  />
+                                                    <RowDefinition  />
+                                                    <RowDefinition  />
+                                                    <RowDefinition  />
+                                                    <RowDefinition  />
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="25*" />
+                                                    <ColumnDefinition Width="25*" />
+                                                    <ColumnDefinition Width="25*" />
+                                                    <ColumnDefinition Width="25*" />
+                                                    <ColumnDefinition Width="25*" />
+                                                    <ColumnDefinition Width="25*" />
+                                                </Grid.ColumnDefinitions>
+                                                <Label Content="Estudio Inicial" Grid.Column="0" Grid.Row="0" Name="lblEstudioInicial"  />
+                                                <TextBox  Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="0"  Name="txtEstudioInicial" />
+                                                <Label Content="Estado Nutricional" Grid.Column="0" Grid.Row="1" Name="label1101"  />
+                                                <TextBox Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="5"  Name="txtEstadoNutricional"  />
+                                                <Label Content="Impresión Clinica" Grid.Column="0" Grid.Row="2" Name="lblImpresion"  />
+                                                <TextBox Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="5"  Name="txtImpresion"  />
+                                                <Label Content="Tratamiento COEX" Grid.Column="0" Grid.Row="3" Name="lbltratamiento"  />
+                                                <TextBox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="5"  Name="txtTratamiento"  />
+                                                <Label Content="Observaciones" Grid.Column="0" Grid.Row="4" Name="lblObservaciones"  />
+                                                <TextBox Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="5"  Name="txtObservaciones"  />
+                                                <Label Content="Destino del Caso" Grid.Column="0" Grid.Row="6" Name="lblDestino"  />
+                                                <ComboBox Grid.Column="1" Grid.Row="6"   Name="cmbDestinoCaso"  />
+                                                <Label Content="Diagnóstico Salida" Grid.Column="4" Grid.Row="6" Name="lblDiagnosticoFinal"  />
+                                                <ComboBox Grid.Column="5" Grid.Row="6"   Name="cmbDiagnosticoFinal"  />
+                                                <Label Content="Nota de Descargo" Grid.Row="5" Name="label8"  />
+                                                <TextBox  Grid.Row="5" Name="txtNotaDescargo" Grid.Column="1" Grid.ColumnSpan="5" />
+                                                <Label Content="Diagnóstico Entrada" Grid.Column="2" Grid.Row="6" Name="label120"/>
+                                                <ComboBox Grid.Column="3"  Grid.Row="6" Name="cmbDiagnosticoInicial"  />
+                                            </Grid>
+
+                                        </StackPanel>
+
+                                    </Grid>
+
+                                </StackPanel>
+
+                        </Grid>
+                        <WrapPanel  Name="wrpButtons" HorizontalAlignment="Center" >
+                            <Button Name="btnPrint" Style="{StaticResource PrintButton}" Click="btnPrint_Click" />
+                            <Button Name="btnCancel" Style="{StaticResource CancelButton}" Click="btnCancel_Click" />
+                            
+                        </WrapPanel>
+                    </StackPanel>
+                </Grid>
+            </Expander>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

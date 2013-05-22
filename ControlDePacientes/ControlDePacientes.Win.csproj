@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{865A1C44-47CF-4ABA-83EB-A36C421F5161}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ControlDePacientes</RootNamespace>
+    <AssemblyName>ControlDePacientes</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ControlDePacientes.App</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bag.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MahApps.Metro">
+      <HintPath>..\packages\MahApps.Metro.0.10.0.0\lib\net40\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="mysql.data, Version=6.4.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Referencias\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\..\Referencias\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Controls.Layout.Toolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Referencias\System.Windows.Controls.Layout.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.0.10.0.0\lib\net40\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WebCam_Capture">
+      <HintPath>..\..\Referencias\WebCam_Capture.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+    <Reference Include="WPFToolkit.Extended">
+      <HintPath>..\..\Referencias\WPFToolkit.Extended.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="frmConsultaReceta.xaml.cs">
+      <DependentUpon>frmConsultaReceta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaRegistroMedico.xaml.cs">
+      <DependentUpon>frmConsultaRegistroMedico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmDiagnostico.xaml.cs">
+      <DependentUpon>frmDiagnostico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmEntregaMedicamento.xaml.cs">
+      <DependentUpon>frmEntregaMedicamento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmHistorialMedicoPrint.xaml.cs">
+      <DependentUpon>frmHistorialMedicoPrint.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmModulo.xaml.cs">
+      <DependentUpon>frmModulo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmModuloHijo.xaml.cs">
+      <DependentUpon>frmModuloHijo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmOcupacion.xaml.cs">
+      <DependentUpon>frmOcupacion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmPantallaRoleUsuario.xaml.cs">
+      <DependentUpon>frmPantallaRoleUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmPopUpInfoAdicionalPaciente.xaml.cs">
+      <DependentUpon>frmPopUpInfoAdicionalPaciente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmRecetaMedica.xaml.cs">
+      <DependentUpon>frmRecetaMedica.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuario.xaml.cs">
+      <DependentUpon>frmUsuario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Introduccion.xaml.cs">
+      <DependentUpon>Introduccion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Panorama.xaml.cs">
+      <DependentUpon>Panorama.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroUpdate.xaml.cs">
+      <DependentUpon>RegistroUpdate.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BasicButtons.xaml.cs">
+      <DependentUpon>BasicButtons.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmUsuarios.xaml.cs">
+      <DependentUpon>frmUsuarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormCharpWebCam\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinFormCharpWebCam\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinFormCharpWebCam\Helper.cs" />
+    <Compile Include="WinFormCharpWebCam\Program.cs" />
+    <Compile Include="WinFormCharpWebCam\WebCam.cs" />
+    <Page Include="frmConsultaReceta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmConsultaRegistroMedico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmDiagnostico.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="frmEntregaMedicamento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmEstados.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmConsultaPaciente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmExamenFisico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmHistorialMedicoPrint.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmModulo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmModuloHijo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmOcupacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmPantallaRoleUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmPopUpInfoAdicionalPaciente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmRecetaMedica.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmRegistroMedico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmRegistroPaciente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmUsuario.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Introduccion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DockGeneral.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="AcercaDe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcercaDe.Designer.cs">
+      <DependentUpon>AcercaDe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="frmConsultaPaciente.xaml.cs">
+      <DependentUpon>frmConsultaPaciente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmEstados.xaml.cs">
+      <DependentUpon>frmEstados.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmExamenFisico.xaml.cs">
+      <DependentUpon>frmExamenFisico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistroMedico.xaml.cs">
+      <DependentUpon>frmRegistroMedico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistroPaciente.xaml.cs">
+      <DependentUpon>frmRegistroPaciente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DockGeneral.xaml.cs">
+      <DependentUpon>DockGeneral.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Panorama.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegistroUpdate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BasicButtons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="frmUsuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="AcercaDe.resx">
+      <DependentUpon>AcercaDe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinFormCharpWebCam\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\onebit_02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\medical_invoice_information.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\nurse.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\drug_basket.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\onebit_13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\onebit_39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SQL.Server.Compact.3.5">
+      <Visible>False</Visible>
+      <ProductName>SQL Server Compact 3.5 SP2</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\onebit_18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\onebit_11.png" />
+    <Resource Include="Images\onebit_32.png" />
+    <Resource Include="Images\onebit_33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Attach.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\onebit_31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\grey_white_mesh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\blue-blur-80_background.jpg" />
+    <Resource Include="Images\blue_canvas.png" />
+    <Resource Include="Images\nophoto.png" />
+    <Resource Include="Images\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\onebit_27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Administrator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bag.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ControlDePacientes.Dal\ControlDePacientes.Dal.csproj">
+      <Project>{B2F66DFE-91EF-4B7C-8A40-58E6FEE2B092}</Project>
+      <Name>ControlDePacientes.Dal</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlDePacientes.Entities\ControlDePacientes.Entities.csproj">
+      <Project>{64150DEE-1DEE-4FA1-A823-E5DC604CB361}</Project>
+      <Name>ControlDePacientes.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlDePacientes.Logic\ControlDePacientes.Logic.csproj">
+      <Project>{6AA627D9-C468-4C5B-A511-39990BB67967}</Project>
+      <Name>ControlDePacientes.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ControlDePacientesReport\ControlDePacientesReport.csproj">
+      <Project>{7036B598-A2C1-4807-8356-17C8E2EFB5F7}</Project>
+      <Name>ControlDePacientesReport</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bag.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bannerMspas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\onebit_34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\onebit_37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\onebit_38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\onebit_36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\printer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HideLeft.png" />
+    <Resource Include="Images\HideRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\gobierno_de_guatemala_banner.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

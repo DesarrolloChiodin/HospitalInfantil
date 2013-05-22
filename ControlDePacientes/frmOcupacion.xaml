@@ -1,0 +1,38 @@
+﻿<Page x:Class="ControlDePacientes.frmOcupacion"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:my="clr-namespace:ControlDePacientes.UserControls" mc:Ignorable="d" 
+      Title="frmOcupacion" Loaded="Page_Loaded">
+
+    <Grid>
+        <ScrollViewer  Name="scrollViewer1">
+            <StackPanel  Name="stackPanel1">
+                <Expander Header="Ocupacion" Name="expander1" IsExpanded="True" >
+                    <Grid>
+                        <StackPanel  Name="stackPanel2" >
+                            <Grid Name="grid1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="10" />
+                                    <RowDefinition  />
+                                    <RowDefinition Height="10" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="25*" />
+                                    <ColumnDefinition Width="25*" />
+                                    <ColumnDefinition Width="25*" />
+                                    <ColumnDefinition Width="25*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Content="Nombre Ocupación" Grid.Column="0" Grid.Row="1" Name="label1" />
+                                <TextBox Grid.Column="1"  Grid.Row="1" Grid.ColumnSpan="3" Name="txtOcupacionName" />
+                            </Grid>
+                            <my:BasicButtons Visibility="Visible" x:Name="UsrCtrlBasicButtons" ButtonSaveClick="UsrCtrlBasicButtons_ButtonSaveClick" ButtonCancelClick="UsrCtrlBasicButtons_ButtonCancelClick" ButtonDeleteClick="UsrCtrlBasicButtons_ButtonDeleteClick"/>
+                            <DataGrid Height="375"  Style="{StaticResource DataGridStyle}" CanUserAddRows="False" CanUserDeleteRows="false" IsReadOnly="True" AutoGenerateColumns="True"  Name="dtgOcupacion" SelectionChanged="dtgOcupacion_SelectionChanged" />
+                        </StackPanel>
+                    </Grid>
+                </Expander>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -1,0 +1,63 @@
+﻿<Page x:Class="ControlDePacientes.RegistroUpdate"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      
+	Title="RegistroUpdate" Loaded="Page_Loaded">
+
+    <Grid>
+        <ScrollViewer   Name="scrollViewer1" >
+            <StackPanel  Name="stackPanel1" >
+                <Grid  Name="grid1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition  />
+                        <RowDefinition  />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25*" />
+                        <ColumnDefinition Width="25*" />
+                        <ColumnDefinition Width="25*" />
+                        <ColumnDefinition Width="25*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Texto Busqueda" Grid.Row="0" Grid.Column="0"  Name="label1"  />
+                    <TextBox Grid.Column="1"  Grid.Row="0"  Name="txtSearchText"  />
+                    <Label Content="Nuevo Registro" Grid.Column="2" Grid.Row="0" Name="label2"  />
+                    <TextBox Grid.Column="3" Grid.Row="0"  Name="txtRegistroMedico"  />
+                </Grid>
+                <WrapPanel Name="wrapPanel1" HorizontalAlignment="Center">
+                    <Button Content="Buscar"  Name="btnSearch" Style="{StaticResource SearchButton}" Click="btnSearch_Click" />
+                    <Button Content="Actualizar"  Name="btnUpdate" Style="{StaticResource SaveButton}" Click="btnUpdate_Click" />
+                    <Button Content="Cancelar" Name="button1" Style="{StaticResource CancelButton}" Click="button1_Click" />
+                </WrapPanel>
+                <DataGrid AutoGenerateColumns="False"  Name="dtgPaciente" Style="{StaticResource DataGridStyle}" IsReadOnly="True" CanUserAddRows="False" CanUserDeleteRows="False" SelectionChanged="dtgPaciente_SelectionChanged" Height="400" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding RegistroMedico}"    Header="Registro Médico" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding Nombre}"    Header="Nombre" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding Apellido}"   Header="Apellido" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding SegundoApellido}" Header="Segundo Apellido" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding FechaNacimiento}"     Header="Fecha Nacimiento" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding SexoName}"    Header="Sexo" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding LugarNacimientoName}"   Header="Lugar Nacimiento" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding NombrePadre}" Header="Nombre Padre" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding OcupacionPadreName}"     Header="Ocupación Padre" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding NombreMadre}"    Header="Nombre Madre" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding OcupacionMadreName}"   Header="Ocupación Madre" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding Direccion}" Header="Dirección" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding DepartamentoName}"     Header="Departamento" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding MunicipioName}"     Header="Municipio" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding Aldea}"     Header="Aldea" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding PaisName}"     Header="Pais" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding TelefonoCasa}"     Header="Teléfono Casa" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding TelefonoEmergencia}"     Header="Teléfono Emergencia" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding CelularPrincipal}"     Header="Celular" IsReadOnly="True" />
+                        <DataGridTextColumn Binding="{Binding Observacion}"     Header="Observación" IsReadOnly="True" />
+                    </DataGrid.Columns>
+
+                </DataGrid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
