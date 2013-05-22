@@ -4,7 +4,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Panorama" Height="300" Width="300">
     <Grid>
-        <Controls:Panorama ItemBox="140" ItemsSource="{Binding Groups}" >
+        <Controls:Panorama ItemBox="140" ItemsSource="{Binding Groups}" Margin="-10,0,10,0" >
             <StackPanel>
                 
                 <Button Content="hola nena" Click="Button_Click"></Button>

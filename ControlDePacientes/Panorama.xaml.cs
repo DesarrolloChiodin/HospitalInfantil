@@ -26,6 +26,8 @@ namespace ControlDePacientes
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            //pruebas varias
+            //pruebas varias
 
         }
     }
