@@ -67,15 +67,11 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\Referencias\mysql.data.dll</HintPath>
     </Reference>
-    <Reference Include="Npgsql">
-      <HintPath>..\..\Referencias\Npgsql.dll</HintPath>
-    </Reference>
     <Reference Include="ReachFramework" />
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Printing" />
     <Reference Include="System.Transactions" />
