@@ -18,6 +18,7 @@ namespace ControlDePacientes.Dal
            {
                {
                    //ejecuto sp para la consulta de Usuarios
+                   //linea agregada
                    MySqlCommand cmd = new MySqlCommand("alergias_getAll", conn);
                    cmd.CommandType = CommandType.StoredProcedure;
 
