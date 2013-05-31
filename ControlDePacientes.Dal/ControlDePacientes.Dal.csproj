@@ -41,10 +41,7 @@
   <ItemGroup>
     <Reference Include="mysql.data, Version=6.4.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Referencias\mysql.data.dll</HintPath>
-    </Reference>
-    <Reference Include="Npgsql">
-      <HintPath>..\..\Referencias\Npgsql.dll</HintPath>
+      <HintPath>..\ControlDePacientes\bin\Debug\mysql.data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />

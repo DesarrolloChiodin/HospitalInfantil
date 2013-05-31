@@ -9,13 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlDePacientes.Entities
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlDePacientes.Logic", "ControlDePacientes.Logic\ControlDePacientes.Logic.csproj", "{6AA627D9-C468-4C5B-A511-39990BB67967}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reportes", "Reportes", "{3F512426-76B0-41FD-B50A-DD7CB2B6C57D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Intalador", "Intalador", "{C3AA1D91-4302-4400-9560-607AB9955F67}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "HIControlPacientes", "HIControlPacientes\HIControlPacientes.vdproj", "{F9971933-ADA2-4E6A-8E83-28CCF7EC903D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlDePacientesReport", "ControlDePacientesReport\ControlDePacientesReport.csproj", "{7036B598-A2C1-4807-8356-17C8E2EFB5F7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlDePacientes.Reports", "ControlDePacientes.Reports\ControlDePacientes.Reports.csproj", "{4D4FA04A-0DD7-4634-8007-9CE6097CECA4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -74,16 +72,16 @@ Global
 		{F9971933-ADA2-4E6A-8E83-28CCF7EC903D}.Release|Mixed Platforms.ActiveCfg = Release
 		{F9971933-ADA2-4E6A-8E83-28CCF7EC903D}.Release|Mixed Platforms.Build.0 = Release
 		{F9971933-ADA2-4E6A-8E83-28CCF7EC903D}.Release|x86.ActiveCfg = Release
-		{7036B598-A2C1-4807-8356-17C8E2EFB5F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7036B598-A2C1-4807-8356-17C8E2EFB5F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7036B598-A2C1-4807-8356-17C8E2EFB5F7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{7036B598-A2C1-4807-8356-17C8E2EFB5F7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{7036B598-A2C1-4807-8356-17C8E2EFB5F7}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{7036B598-A2C1-4807-8356-17C8E2EFB5F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7036B598-A2C1-4807-8356-17C8E2EFB5F7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7036B598-A2C1-4807-8356-17C8E2EFB5F7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{7036B598-A2C1-4807-8356-17C8E2EFB5F7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{7036B598-A2C1-4807-8356-17C8E2EFB5F7}.Release|x86.ActiveCfg = Release|Any CPU
+		{4D4FA04A-0DD7-4634-8007-9CE6097CECA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D4FA04A-0DD7-4634-8007-9CE6097CECA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D4FA04A-0DD7-4634-8007-9CE6097CECA4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{4D4FA04A-0DD7-4634-8007-9CE6097CECA4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{4D4FA04A-0DD7-4634-8007-9CE6097CECA4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4D4FA04A-0DD7-4634-8007-9CE6097CECA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D4FA04A-0DD7-4634-8007-9CE6097CECA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D4FA04A-0DD7-4634-8007-9CE6097CECA4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{4D4FA04A-0DD7-4634-8007-9CE6097CECA4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{4D4FA04A-0DD7-4634-8007-9CE6097CECA4}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
