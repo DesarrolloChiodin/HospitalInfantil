@@ -429,6 +429,10 @@
       <Project>{6AA627D9-C468-4C5B-A511-39990BB67967}</Project>
       <Name>ControlDePacientes.Logic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ControlDePacientes.Reports\ControlDePacientes.Reports.csproj">
+      <Project>{4d4fa04a-0dd7-4634-8007-9ce6097ceca4}</Project>
+      <Name>ControlDePacientes.Reports</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\bag.ico" />
