@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ControlDePacientes.Dal;
-using ControlDePacientesReport;
+using ReportesInfantil;
 using DurationCalculatorApp;
 using ControlDePacientes.Logic;
 
@@ -446,11 +446,11 @@ namespace ControlDePacientes
             //dtgRegistroMedico.ItemsSource = null;
             //expDetail.IsExpanded = false;
 
-            ControlDePacientesReport.Form2 lForm1 = new Form2();
-            lForm1.mIdHistorialMedico = mIdHistorialMedico;
-            lForm1.ShowDialog();
+            ReportesInfantil.Form1 lform1 = new Form1();
+            lform1.mIdHistorialMedico = mIdHistorialMedico;
+            lform1.ShowDialog();
             LoopVisualTree(expDetail);
-            imgPaciente.Source = new BitmapImage(new Uri("/ControlDePacientes;component/Images/nophoto.png", UriKind.Relative));
+            imgPaciente.Source = new BitmapImage(new Uri("/controldepacientes;component/images/nophoto.png", UriKind.Relative));
             dtgRegistroMedico.ItemsSource = null;
             expDetail.IsExpanded = false;
         }
